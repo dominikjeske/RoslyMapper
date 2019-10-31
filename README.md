@@ -25,7 +25,7 @@ To summarize we have:
 With all that evil we can ask why people are using Automapper.
 
 - We have many models with similar properties in diffrent layers to it is very tedious to write them by hand
-- Even when we take a time to write manual mapper AutoMapper give us guard so when some propery is added to model we can detect this (unfortunatelly only in runtime)
+- Even when we take a time to write manual mapper AutoMapper give us guard so when some property is added to model we can detect this (unfortunatelly only in runtime)
 - Automapper have many build in features like LINQ support that can be really time saver
 - Last but not least - people are lazy and have tendency to use new toys or reuse toys that are used by others
 
@@ -58,7 +58,7 @@ public class Dst
 }
 ```
 
-When we want make some simple mapping of objects with same propery name we can write adapter like this
+When we want make some simple mapping of objects with same property name we can write adapter like this
 
 ```csharp
 [Adapter]
