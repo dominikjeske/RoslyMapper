@@ -14,7 +14,7 @@ To summarize we have:
 
 - Static analysing is not working and propertise looks like they are not in use
 - We cannot find all references of properties
-- A convention-based generator is woring in runtime so all errors are visible after applications starts and sometimes we don't detect bug until it gets to producion
+- A convention-based generator is working in runtime so all errors are visible after applications starts and sometimes we don't detect bug until it gets to producion
 - Generated code is kind of black magic - it is working or not. We find out in production ;) 
 - "With great power comes great responsibility" - tool have many features and it is tempting for people to overuse so business logic is leaking from domain into infrastructure
 - Performence of runtime generated code will never be as fast as code compiled durilng build by c# compiler
