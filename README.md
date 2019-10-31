@@ -144,6 +144,7 @@ Most important things of this process are
 
 If this tool will have audience I'm thinking about
 
+- Public source code
 - Creating nuget
 - Add support for creating objects using constructor
 - Add support for creating objects using its static Create method
