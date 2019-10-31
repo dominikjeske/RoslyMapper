@@ -12,27 +12,27 @@ To summarize we have:
 
 **Disadvantages:**
 
-- Static analysing is not working and properties looks like they are not in use
+- Static analyzing  is not working and properties looks like they are not in use
 - We cannot find all references of properties
-- A convention-based generator is working in runtime so all errors are visible after applications starts and sometimes we don't detect bug until it gets to producion
+- A convention-based generator is working in runtime so all errors are visible after applications starts and sometimes we don't detect bug until it gets to production
 - Generated code is kind of black magic - it is working or not. We find out in production ;) 
 - "With great power comes great responsibility" - tool have many features and it is tempting for people to overuse so business logic is leaking from domain into infrastructure
-- Performence of runtime generated code will never be as fast as code compiled durilng build by c# compiler
+- Performance  of runtime generated code will never be as fast as code compiled during build by c# compiler
 - Debugging mapping code is impossible
 
 **Advantages:**
 
 With all that evil we can ask why people are using Automapper.
 
-- We have many models with similar properties in diffrent layers to it is very tedious to write them by hand
-- Even when we take a time to write manual mapper AutoMapper give us guard so when some property is added to model we can detect this (unfortunatelly only in runtime)
-- Automapper have many build in features like LINQ support that can be really time saver
+- We have many models with similar properties in different layers to it is very tedious to write them by hand
+- Even when we take a time to write manual mapper AutoMapper give us guard so when some property is added to model we can detect this (unfortunately only in runtime)
+- AutoMapper have many build in features like LINQ support that can be really time saver
 - Last but not least - people are lazy and have tendency to use new toys or reuse toys that are used by others
 
 
 # Philosophy
 
-A main philosofy of Roslymapper is to create simple mapping expirience that is created in build time and prevents from common missusings.
+A main philosophy of RoslyMapper is to create simple mapping experience that is created in build time and prevents from common misusings.
 
 # How
 
@@ -130,15 +130,15 @@ public partial class MyAdapter : BaseAdapter<Src, Dst>
 
 Most important things of this process are
 
-- Code is generated in so called design time build so no manual build is needed. We just add attribute to class and code is generated
+- Code is generated inside obj directory and is accessible instantly (without manual compilation) so when we invoke F12 we can choose to navigate to this file and of course during debugging or static analyzing the reference is visible by the tools
 - Code is generated inside obj directory and is accesibly instanlty so when we invoke F12 we can choose to navigate to this file and of course during debugging or static analysing the reference is visible by the tools
 - There is no external tool or IDE dependency
 - There is no reflection or expression tree's - just pure c# code
 - All error will be visible in Error window just like other compiler errors
 - There is no magic places - we see all the code that will be used
-- When some property will be addeed in future we will fail but in build time
-- Most use case of this tool promote simple cases - if you want to go to database to map some property it is probaly time to write code manually
-- Performence should be the same as other manually created (only build time can be sligly longer)
+- When some property will be added in future we will fail but in build time
+- Most use case of this tool promote simple cases - if you want to go to database to map some property it is probably time to write code manually
+- Performance  should be the same as other manually created (only build time can be slightly longer)
   
 # Future
 
